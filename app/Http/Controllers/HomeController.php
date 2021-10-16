@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Models\Rol;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,5 +27,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function caso1(){
+        $header = ['id', 'nombre', 'correo'];
+
+        $usuarios = User::whereIn('id_rol', [1,2])->select('id', 'nombre', 'correo')->get();
+        
+
+        return response()->json(['headers' => $header, 'info' => $usuarios]);
     }
 }

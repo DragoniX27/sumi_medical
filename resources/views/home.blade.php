@@ -17,7 +17,7 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
-            <example-component></example-component>
+            <tabla-component url="{{ url('/get-caso-1') }}"></tabla-component>
         </div>
     </div>
 </div>
