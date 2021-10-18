@@ -21,3 +21,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/get-caso-1', [App\Http\Controllers\HomeController::class, 'caso1']);
+Route::get('/get-caso-2', [App\Http\Controllers\HomeController::class, 'caso2']);
+Route::get('/get-caso-3', [App\Http\Controllers\HomeController::class, 'caso3']);

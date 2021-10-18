@@ -4,20 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-            <tabla-component url="{{ url('/get-caso-1') }}"></tabla-component>
+            <tabla-info url="{{ url('/get-caso-1') }}" ref='tabla_info'></tabla-info>
+            <tabla-info url="{{ url('/get-caso-2') }}" ref='tabla_info'></tabla-info>
+            <tabla-info url="{{ url('/get-caso-3') }}" ref='tabla_info'></tabla-info>
         </div>
     </div>
 </div>
